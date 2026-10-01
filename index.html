@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ka" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusDev Academy | პრემიუმ სასწავლო პლატფორმა & Roadmap</title>
+  <meta name="description" content="NexusDev — თანამედროვე, პრემიუმ ტექნოლოგიური სასწავლო პლატფორმა. ინტერაქტიული სასწავლო Roadmap, რეალური პროექტები და ინდივიდუალური მენტორობა.">
+  <meta name="keywords" content="სასწავლო roadmap, პროგრამირება, frontend, backend, fullstack, კოდირება, განათლება">
+
+  <!-- Google Fonts: FiraGO & Plus Jakarta Sans for elite Georgian & Latin typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+GO:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%236366f1'/><stop offset='100%' stop-color='%23a855f7'/></linearGradient></defs><circle cx='50' cy='50' r='48' fill='url(%23g)'/><path d='M30 35 L50 22 L70 35 L70 65 L50 78 L30 65 Z' fill='none' stroke='white' stroke-width='6'/><circle cx='50' cy='50' r='12' fill='white'/></svg>">
+</head>
+<body>
+  <!-- Ambient Gradient Background Lights -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Mouse Tracking Light Aura -->
+  <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="navLogo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div class="logo-text">Nexus<span class="gradient-text">Dev</span></div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">მთავარი</a>
+        <a href="#about" class="nav-link">ჩვენ შესახებ</a>
+        <a href="#features" class="nav-link">უპირატესობები</a>
+        <a href="#roadmap" class="nav-link">სასწავლო Roadmap</a>
+        <a href="#connect" class="nav-link">კავშირი</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="ფერების თემის გადართვა" title="თემის შეცვლა">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#roadmap" class="btn btn-primary nav-cta">
+          <span>დაიწყე ახლავე</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="მენიუს გახსნა">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-down">
+            <span class="badge-dot"></span>
+            <span class="badge-text">2026 წლის განახლებული სასწავლო პროგრამა</span>
+            <span class="badge-arrow">→</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-up">
+            დაეუფლე <span class="gradient-text-hero">მომავლის ტექნოლოგიებს</span> პრაქტიკული გზით
+          </h1>
+
+          <p class="hero-subtitle animate-fade-up delay-1">
+            ინტერაქტიული სასწავლო Roadmap, რეალური ინდუსტრიული პროექტები და ინდივიდუალური მენტორობა. გადააქციე ცოდნა მოთხოვნად კარიერად უმოკლეს დროში.
+          </p>
+
+          <div class="hero-cta-group animate-fade-up delay-2">
+            <a href="#roadmap" class="btn btn-primary btn-large">
+              <span>გაეცანი Roadmap-ს</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#about" class="btn btn-secondary btn-large">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              <span>როგორ ვასწავლით?</span>
+            </a>
+          </div>
+
+          <!-- Social Proof / Trust Highlights -->
+          <div class="hero-trust animate-fade-up delay-3">
+            <div class="avatar-stack">
+              <div class="avatar av-1">GD</div>
+              <div class="avatar av-2">AK</div>
+              <div class="avatar av-3">NL</div>
+              <div class="avatar av-4">TB</div>
+              <div class="avatar av-plus">+2.4k</div>
+            </div>
+            <div class="trust-info">
+              <div class="rating-stars">
+                ★★★★★ <span class="rating-num">4.9/5</span>
+              </div>
+              <span class="trust-label">2,400+ წარმატებული სტუდენტი და კურსდამთავრებული</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Dynamic Card Interface -->
+        <div class="hero-visual animate-scale-in">
+          <div class="interactive-preview-card" id="heroCard">
+            <div class="card-glass-header">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="card-title-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>NexusDev_Path_2026.ts</span>
+              </div>
+              <div class="card-status-badge">აქტიური</div>
+            </div>
+
+            <div class="card-code-body">
+              <pre><code><span class="c-keyword">const</span> <span class="c-var">student</span> = <span class="c-keyword">new</span> <span class="c-class">FullStackDeveloper</span>({
+  <span class="c-prop">level</span>: <span class="c-string">"Junior"</span> → <span class="c-string">"Senior Professional"</span>,
+  <span class="c-prop">skills</span>: [<span class="c-string">"React"</span>, <span class="c-string">"Node.js"</span>, <span class="c-string">"TypeScript"</span>, <span class="c-string">"AI Tools"</span>],
+  <span class="c-prop">projects</span>: <span class="c-number">12</span>,
+  <span class="c-prop">careerReady</span>: <span class="c-bool">true</span>
+});
+
+<span class="c-comment">// რეალური შედეგი და გარანტირებული ზრდა</span>
+<span class="c-keyword">await</span> student.<span class="c-func">accelerateCareer</span>();</code></pre>
+            </div>
+
+            <!-- Floating Interactive Floating Badges -->
+            <div class="floating-badge badge-top-right glass-card">
+              <div class="badge-icon-wrap rocket-icon">🚀</div>
+              <div class="badge-content-sm">
+                <div class="badge-title-sm">94% დასაქმება</div>
+                <div class="badge-sub-sm">პირველ 4 თვეში</div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left glass-card">
+              <div class="badge-icon-wrap mentor-icon">⚡</div>
+              <div class="badge-content-sm">
+                <div class="badge-title-sm">1-on-1 მენტორინგი</div>
+                <div class="badge-sub-sm">ყოველკვირეული Code Review</div>
+              </div>
+            </div>
+
+            <!-- Live Progress Simulator Mini Card -->
+            <div class="card-footer-stats">
+              <div class="stat-mini">
+                <span class="stat-mini-label">პროგრესი</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar-fill" style="width: 78%;"></div>
+                </div>
+              </div>
+              <div class="stat-percentage">78% დასრულებული</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Ticker / Partners / Tech Marquee -->
+      <div class="tech-marquee-wrapper">
+        <div class="tech-marquee-label">თანამედროვე ტექნოლოგიური სტეკი:</div>
+        <div class="tech-marquee-track">
+          <div class="tech-tag"><span class="tech-icon">⚡</span> JavaScript ESNext</div>
+          <div class="tech-tag"><span class="tech-icon">⚛️</span> React & Next.js</div>
+          <div class="tech-tag"><span class="tech-icon">📘</span> TypeScript</div>
+          <div class="tech-tag"><span class="tech-icon">🟢</span> Node.js & Express</div>
+          <div class="tech-tag"><span class="tech-icon">🐬</span> PostgreSQL & Prisma</div>
+          <div class="tech-tag"><span class="tech-icon">🐳</span> Docker & CI/CD</div>
+          <div class="tech-tag"><span class="tech-icon">🤖</span> AI API Integrations</div>
+          <div class="tech-tag"><span class="tech-icon">🎨</span> Modern UI & Tailwind</div>
+          <!-- duplicated for continuous animation -->
+          <div class="tech-tag"><span class="tech-icon">⚡</span> JavaScript ESNext</div>
+          <div class="tech-tag"><span class="tech-icon">⚛️</span> React & Next.js</div>
+          <div class="tech-tag"><span class="tech-icon">📘</span> TypeScript</div>
+          <div class="tech-tag"><span class="tech-icon">🟢</span> Node.js & Express</div>
+          <div class="tech-tag"><span class="tech-icon">🐬</span> PostgreSQL & Prisma</div>
+          <div class="tech-tag"><span class="tech-icon">🐳</span> Docker & CI/CD</div>
+          <div class="tech-tag"><span class="tech-icon">🤖</span> AI API Integrations</div>
+          <div class="tech-tag"><span class="tech-icon">🎨</span> Modern UI & Tailwind</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ჩვენ შესახებ</div>
+          <h2 class="section-title">ტექნოლოგიური განათლების <span class="gradient-text">ახალი ერა</span></h2>
+          <p class="section-desc">
+            NexusDev შეიქმნა იმისთვის, რომ ტექნოლოგიების შესწავლის რთული პროცესი აქციოს ამაღელვებელ, გასაგებ და შედეგზე ორიენტირებულ მოგზაურობად.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Key Pillars & Philosophy -->
+          <div class="about-content">
+            <h3 class="about-h3">რატომ ირჩევენ მოტივირებული ადამიანები NexusDev-ს?</h3>
+            <p class="about-lead">
+              ჩვენ უარი ვთქვით მოძველებულ თეორიულ ლექციებზე. ჩვენი მეთოდოლოგია აგებულია <strong>80% პრაქტიკასა და 20% კონცეპტუალურ გააზრებაზე</strong>, სადაც ყოველი ნაბიჯი რეალური ინდუსტრიული ამოცანის გადაჭრაა.
+            </p>
+
+            <div class="about-features-list">
+              <div class="about-item">
+                <div class="about-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h4>პრაქტიკა პირველივე დღიდან</h4>
+                  <p>შენ არ უყურებ მხოლოდ ვიდეოებს — შენ წერ სუფთა კოდს, აწყობ რეალურ აპლიკაციებს და აგვარებ რეალურ პრობლემებს.</p>
+                </div>
+              </div>
+
+              <div class="about-item">
+                <div class="about-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h4>ინდივიდუალური მენტორობა</h4>
+                  <p>Senior ინჟინრები ყოველკვირეულად ამოწმებენ შენს კოდს, გიზიარებენ Best Practices-ს და გაძლევენ სიღრმისეულ უკუკავშირს.</p>
+                </div>
+              </div>
+
+              <div class="about-item">
+                <div class="about-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h4>სამუშაოზე ორიენტირებული პორტფოლიო</h4>
+                  <p>კურსის ბოლოს გაქვს 6+ დასრულებული, გამართული სრულფასოვანი პროექტი GitHub-ზე, რომელიც დამსაქმებელს შთაბეჭდილებას მოუხდენს.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Comparison Box & Key Metrics -->
+          <div class="about-interactive-card glass-card">
+            <div class="comparison-card">
+              <div class="comparison-header">
+                <h4>ტრადიციული vs NexusDev მიდგომა</h4>
+              </div>
+
+              <div class="comparison-row traditional">
+                <div class="comp-label">❌ ტრადიციული კურსები</div>
+                <div class="comp-text">მოძველებული სილაბუსი, მშრალი თეორია, უკუკავშირის დეფიციტი და მარტო ბრძოლა შეცდომებთან.</div>
+              </div>
+
+              <div class="comparison-row modern">
+                <div class="comp-label">✨ NexusDev ეკოსისტემა</div>
+                <div class="comp-text">2026 წლის აქტუალური ტექნოლოგიები, მენტორის პირადი დახმარება, რეალური გუნდური პროექტები და AI ინტეგრაცია.</div>
+              </div>
+            </div>
+
+            <!-- Metrics Counter Strip -->
+            <div class="about-stats-grid">
+              <div class="stat-card">
+                <div class="stat-number" data-target="96">0%</div>
+                <div class="stat-title">დასაქმების მაჩვენებელი</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="500">0+</div>
+                <div class="stat-title">კურსდამთავრებული</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="45">0+</div>
+                <div class="stat-title">პრაქტიკული პროექტი</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="24">0/7</div>
+                <div class="stat-title">საზოგადოების მხარდაჭერა</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">უპირატესობები</div>
+          <h2 class="section-title">ყველაფერი, რაც გჭირდება <span class="gradient-text">წარმატებისთვის</span></h2>
+          <p class="section-desc">
+            პრემიუმ ინსტრუმენტები და სასწავლო გარემო, რომელიც მაქსიმალურად აჩქარებს შენს პროფესიულ განვითარებას.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card glass-card">
+            <div class="feature-icon-wrapper f-grad-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">პროექტებზე დაფუძნებული სწავლა</h3>
+            <p class="feature-text">
+              არანაირი აბსტრაქტული მაგალითები. შენ შექმნი SaaS პლატფორმებს, API სერვისებს, E-commerce გადაწყვეტილებებს და ინტერაქტიულ Dashboard-ებს.
+            </p>
+            <div class="feature-footer">
+              <span class="feature-tag">Real Production</span>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card glass-card">
+            <div class="feature-icon-wrapper f-grad-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">1-on-1 მენტორინგი</h3>
+            <p class="feature-text">
+              Senior დეველოპერები რეგულარულად აფასებენ შენს კოდს GitHub-ზე, გეხმარებიან ბაგების გარჩევაში და გაწვდიან რჩევებს არქიტექტურაზე.
+            </p>
+            <div class="feature-footer">
+              <span class="feature-tag">Senior Engineers</span>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card glass-card">
+            <div class="feature-icon-wrapper f-grad-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">AI-ით გაძლიერებული გარემო</h3>
+            <p class="feature-text">
+              ისწავლე როგორ გამოიყენო თანამედროვე ხელოვნური ინტელექტი (Copilot, Cursor, LLMs) კოდის დასაჩქარებლად, ტესტირებისა და დებაგინგისთვის.
+            </p>
+            <div class="feature-footer">
+              <span class="feature-tag">Next-Gen Workflow</span>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card glass-card">
+            <div class="feature-icon-wrapper f-grad-4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">კარიერული მომზადება & CV</h3>
+            <p class="feature-text">
+              Tech ინტერვიუების სიმულაცია, ალგორითმების პრაქტიკა (LeetCode/DSA), LinkedIn-ის ოპტიმიზაცია და პარტნიორ კომპანიებთან რეკომენდაცია.
+            </p>
+            <div class="feature-footer">
+              <span class="feature-tag">Job Guarantee Track</span>
+            </div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="feature-card glass-card">
+            <div class="feature-icon-wrapper f-grad-5">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">დახურული საზოგადოება</h3>
+            <p class="feature-text">
+              შეუერთდი ასობით აქტიურ სტუდენტსა და დეველოპერს Discord-ზე. მონაწილეობა მიიღე ჰაკათონებში, გაუზიარე იდეები და იპოვე თანაგუნდელები.
+            </p>
+            <div class="feature-footer">
+              <span class="feature-tag">Discord Community</span>
+            </div>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="feature-card glass-card">
+            <div class="feature-icon-wrapper f-grad-6">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">ვერიფიცირებული სერტიფიკატი</h3>
+            <p class="feature-text">
+              კურსის წარმატებით დასრულებისას მიიღებ უნიკალურ ციფრულ სერტიფიკატს QR კოდითა და GitHub რეპოზიტორიის ლინკებით შენი ცოდნის დასადასტურებლად.
+            </p>
+            <div class="feature-footer">
+              <span class="feature-tag">Industry Recognized</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP SECTION (INTERACTIVE LEARNING ROADMAP) -->
+    <section class="roadmap-section" id="roadmap">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">სასწავლო Roadmap</div>
+          <h2 class="section-title">ნაბიჯ-ნაბიჯ <span class="gradient-text">პროფესიონალიზმამდე</span></h2>
+          <p class="section-desc">
+            აირჩიე შენთვის სასურველი მიმართულება. თითოეული ეტაპი მოიცავს პრაქტიკულ უნარებს, პროექტებსა და ტექნოლოგიურ ინსტრუმენტებს.
+          </p>
+        </div>
+
+        <!-- Roadmap Track Tabs -->
+        <div class="roadmap-tabs-container">
+          <div class="roadmap-tabs" role="tablist">
+            <button class="roadmap-tab-btn active" data-track="frontend">
+              <span class="tab-emoji">🎨</span>
+              <span>Frontend Developer</span>
+            </button>
+            <button class="roadmap-tab-btn" data-track="fullstack">
+              <span class="tab-emoji">🚀</span>
+              <span>Full-Stack Engineer</span>
+            </button>
+            <button class="roadmap-tab-btn" data-track="backend">
+              <span class="tab-emoji">⚙️</span>
+              <span>Backend Architect</span>
+            </button>
+            <button class="roadmap-tab-btn" data-track="ai">
+              <span class="tab-emoji">🧠</span>
+              <span>AI & Modern Stack</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Track Info Header Bar -->
+        <div class="track-header-bar glass-card">
+          <div class="track-summary">
+            <h3 class="track-title" id="trackTitle">Frontend Developer Roadmap 2026</h3>
+            <p class="track-desc" id="trackDesc">დაეუფლე თანამედროვე ინტერფეისების, რესპონსიული დიზაინის, React-ისა და Next.js-ის ეკოსისტემას.</p>
+          </div>
+          <div class="track-meta">
+            <div class="meta-item">
+              <span class="meta-label">ხანგრძლივობა:</span>
+              <span class="meta-val" id="trackDuration">4-6 თვე</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">პროექტები:</span>
+              <span class="meta-val" id="trackProjects">8 პრაქტიკული ნამუშევარი</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">დონე:</span>
+              <span class="meta-val" id="trackLevel">დამწყებიდან პროფესიონალამდე</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Progress Counter Simulator -->
+        <div class="roadmap-progress-tracker glass-card">
+          <div class="tracker-info">
+            <span class="tracker-title">📌 შენი სასწავლო პროგრესი (მონიშნე დასრულებული ეტაპები):</span>
+            <span class="tracker-count" id="completedCount">0 / 5 დასრულებული (0%)</span>
+          </div>
+          <div class="tracker-bar">
+            <div class="tracker-bar-fill" id="trackerBarFill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Timeline Container (Dynamic Content Populated via JS) -->
+        <div class="roadmap-timeline" id="roadmapTimeline">
+          <!-- Steps injected by script.js -->
+        </div>
+
+        <!-- Roadmap CTA Banner -->
+        <div class="roadmap-cta-banner glass-card">
+          <div class="cta-banner-content">
+            <h3>არ იცი რომელი მიმართულება შეგეფერება?</h3>
+            <p>ჩვენი მენტორები მზად არიან გაგიწიონ უფასო 15-წუთიანი კონსულტაცია და დაგეხმარონ სწორი გზის არჩევაში.</p>
+          </div>
+          <a href="#connect" class="btn btn-primary">
+            <span>დაჯავშნე უფასო კონსულტაცია</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="container faq-container">
+        <div class="section-header text-center">
+          <div class="section-kicker">კითხვები & პასუხები</div>
+          <h2 class="section-title">ხშირად დასმული <span class="gradient-text">კითხვები</span></h2>
+          <p class="section-desc">პასუხები ყველაზე მნიშვნელოვან კითხვებზე სწავლის პროცესის შესახებ.</p>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item glass-card">
+            <button class="accordion-header" aria-expanded="false">
+              <span>საჭიროა თუ არა წინასწარი გამოცდილება პროგრამირებაში?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>არა, ჩვენი საბაზისო მოდულები შექმნილია ნულიდან დამწყებთათვის. ყველაფერი აიხსნება მარტივი, გასაგები ვიზუალური ენითა და ეტაპობრივი პრაქტიკით.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item glass-card">
+            <button class="accordion-header" aria-expanded="false">
+              <span>რამდენი დრო უნდა დავუთმო სწავლას კვირაში?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>სასურველია კვირაში მინიმუმ 8-12 საათის დათმობა. პროგრამა მოქნილია და შეგიძლიათ შეათავსოთ სამსახურთან ან უნივერსიტეტთან.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item glass-card">
+            <button class="accordion-header" aria-expanded="false">
+              <span>როგორ მეხმარებით დასაქმებაში?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>სწავლის დასკვნით ეტაპზე ვამზადებთ შენს CV-ს, ვაწყობთ ტექნიკურ სიმულაციურ ინტერვიუებს და შენს გამართულ პროექტებს წარვუდგენთ პარტნიორ კომპანიებს.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item glass-card">
+            <button class="accordion-header" aria-expanded="false">
+              <span>მექნება თუ არა წვდომა მასალებზე კურსის დასრულების შემდეგ?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>დიახ! შენ გექნება უვადო წვდომა ყველა მასალაზე, ვიდეო ჩანაწერზე, კოდის რეპოზიტორიებსა და NexusDev-ის Discord საზოგადოებაზე.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT / CONTACT SECTION -->
+    <section class="connect-section" id="connect">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">კავშირი</div>
+          <h2 class="section-title">დაიწყე შენი <span class="gradient-text">მოგზაურობა დღესვე</span></h2>
+          <p class="section-desc">
+            დაგვიკავშირდი, გაიარე კონსულტაცია ან გახდი NexusDev-ის საზოგადოების წევრი.
+          </p>
+        </div>
+
+        <div class="connect-grid">
+          <!-- Contact Form Glass Card -->
+          <div class="connect-form-card glass-card">
+            <div class="form-badge">
+              <span class="status-indicator"></span>
+              <span>რეგისტრაცია 2026 წლის ნაკადზე ღიაა</span>
+            </div>
+            <h3 class="form-title">შეავსე მარტივი ფორმა</h3>
+            <p class="form-desc">ჩვენი გუნდი დაგიკავშირდებათ 24 საათის განმავლობაში დეტალური ინფორმაციით.</p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="userName" class="form-label">შენი სახელი და გვარი</label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <input type="text" id="userName" name="userName" class="form-input" placeholder="მაგ. გიორგი ბერიძე" required>
+                </div>
+                <div class="field-error" id="nameError">გთხოვთ მიუთითოთ სახელი</div>
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail" class="form-label">ელექტრონული ფოსტა</label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <input type="email" id="userEmail" name="userEmail" class="form-input" placeholder="name@example.com" required>
+                </div>
+                <div class="field-error" id="emailError">გთხოვთ მიუთითოთ სწორი ელ-ფოსტა</div>
+              </div>
+
+              <div class="form-group">
+                <label for="courseSelect" class="form-label">სასურველი მიმართულება</label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                  <select id="courseSelect" name="courseSelect" class="form-input form-select" required>
+                    <option value="" disabled selected>აირჩიე მიმართულება</option>
+                    <option value="frontend">Frontend Developer (React, Next.js, TS)</option>
+                    <option value="fullstack">Full-Stack Engineer (MERN / Next.js)</option>
+                    <option value="backend">Backend Architect (Node.js, SQL, Docker)</option>
+                    <option value="ai">AI & Modern Web Engineering</option>
+                  </select>
+                </div>
+                <div class="field-error" id="courseError">გთხოვთ აირჩიოთ სასურველი მიმართულება</div>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage" class="form-label">შეტყობინება ან კითხვა (არასავალდებულო)</label>
+                <div class="input-wrapper textarea-wrapper">
+                  <textarea id="userMessage" name="userMessage" class="form-input form-textarea" rows="3" placeholder="გვითხარი შენი მიზნების ან კითხვების შესახებ..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                <span>გაგზავნა & კონსულტაცია</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Direct Contacts & Social Hub -->
+          <div class="connect-info-col">
+            <div class="contact-card-box glass-card">
+              <h3 class="connect-h3">პირდაპირი კონტაქტი</h3>
+              <p class="connect-p">გაქვს შეკითხვა? ჩვენი გუნდი მზადაა გიპასუხოს ნებისმიერ დროს.</p>
+
+              <div class="contact-links-list">
+                <a href="mailto:hello@nexusdev.ge" class="contact-link-row">
+                  <div class="c-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="c-title">ელ. ფოსტა</div>
+                    <div class="c-value">hello@nexusdev.ge</div>
+                  </div>
+                </a>
+
+                <a href="tel:+995322000000" class="contact-link-row">
+                  <div class="c-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="c-title">ტელეფონი</div>
+                    <div class="c-value">+995 32 200 00 00</div>
+                  </div>
+                </a>
+
+                <div class="contact-link-row">
+                  <div class="c-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="c-title">ლოკაცია</div>
+                    <div class="c-value">თბილისი, საქართველო (ონლაინ & ჰიბრიდული)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Join Community Channels -->
+            <div class="community-box glass-card">
+              <h3 class="community-h3">შემოუერთდი საზოგადოებას</h3>
+              <p class="community-p">იყავი მუდმივად ინფორმირებული, გაიცანი კოლეგები და მიიღე უფასო მასალები:</p>
+
+              <div class="social-pills-grid">
+                <a href="https://discord.com" target="_blank" rel="noopener" class="social-pill discord">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                  </svg>
+                  <span>Discord</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="social-pill github">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill linkedin">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://t.me" target="_blank" rel="noopener" class="social-pill telegram">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.46c.536-.196 1.006.128.832.965z"/>
+                  </svg>
+                  <span>Telegram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-mark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="logo-text">Nexus<span class="gradient-text">Dev</span></div>
+          </div>
+          <p class="footer-tagline">
+            თანამედროვე ტექნოლოგიური განათლების პლატფორმა. შენი გზამკვლევი Junior-იდან Lead დეველოპერამდე.
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4 class="footer-col-title">ნავიგაცია</h4>
+            <ul>
+              <li><a href="#hero">მთავარი</a></li>
+              <li><a href="#about">ჩვენ შესახებ</a></li>
+              <li><a href="#features">უპირატესობები</a></li>
+              <li><a href="#roadmap">სასწავლო Roadmap</a></li>
+              <li><a href="#connect">კავშირი</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">მიმართულებები</h4>
+            <ul>
+              <li><a href="#roadmap" data-jump-track="frontend">Frontend Development</a></li>
+              <li><a href="#roadmap" data-jump-track="fullstack">Full-Stack Engineering</a></li>
+              <li><a href="#roadmap" data-jump-track="backend">Backend Architecture</a></li>
+              <li><a href="#roadmap" data-jump-track="ai">AI Integrations & Tools</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">რესურსები</h4>
+            <ul>
+              <li><a href="#faq">ხშირი კითხვები</a></li>
+              <li><a href="#roadmap">სასწავლო რუკა</a></li>
+              <li><a href="#about">მეთოდოლოგია</a></li>
+              <li><a href="#connect">საზოგადოება</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 NexusDev Academy. ყველა უფლება დაცულია. შექმნილია უმაღლესი სტანდარტებით.
+        </div>
+        <div class="footer-extra-links">
+          <a href="#">კონფიდენციალურობა</a>
+          <span>•</span>
+          <a href="#">წესები და პირობები</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
